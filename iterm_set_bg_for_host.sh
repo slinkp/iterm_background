@@ -34,6 +34,9 @@ esac
 
 
 IMG_DIR=~/.hostbackgrounds
+
+mkdir -p "${IMG_DIR}"
+
 if [ -z "$TEXT" ]; then
     IMG_PATH=""
 else
