@@ -4,6 +4,9 @@
 This automatically sets the background image on iterm2 anytime you ssh to
 another host.
 
+It actually doesn't matter if it's via ssh; we use iTerm2 triggers that just
+pattern-match on the prompt.
+
 ## Demo
 
 <img src="http://recordit.co/RoxFH5k7YW"  alt="an animation showing terminal backgrounds changing" />
@@ -20,11 +23,13 @@ another host.
 
 * Check out this repo and put this directory somewhere on your `$PATH`.
 
-* Hack the `iterm_set_bg_for_host.sh` to change the `FONT` env var if needed.
-  Any TTF font on your system should work.
-  TODO: make configurable
+* If you want to override the default font (boring Microsoft Sans),
+  just export `ITERM_BG_FONT` env var, set it to the full path of any TTF font you like.
 
 * iTerm2 manual configuration of triggers XXX TODO
+
+* If you don't like the generated images, play around with the `convert`
+  command in `iterm_set_bg_for_host.sh` to your liking.
 
 
 ## Fun Hack

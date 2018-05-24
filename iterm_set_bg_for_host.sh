@@ -2,16 +2,19 @@
 
 HERE=`(cd "${0%/*}" 2>/dev/null; echo "$PWD"/)`
 
+if [ -z "${ITERM_BG_FONT}" ]; then
+    ITERM_BG_FONT=/Library//Fonts/Microsoft\ Sans\ Serif.ttf
+fi
+
 function generate_text_image {
     # Depends on `convert` from ImageMagick.
     # TODO:
     echo HELLLOOO >> /tmp/argh
     TEXT="$1"
     IMG_PATH="$2"
-    FONT=/Library//Fonts/Microsoft\ Sans\ Serif.ttf
     /usr/local/bin/convert -background black -fill white -font "$FONT" -size 400x200 \
             -rotate 20 "label:${TEXT}" "${IMG_PATH}"  >> /tmp/argh 2>&1
-    echo "convert -background black -fill white -font \"$FONT\" -size 400x200 -rotate 20 \"label:${TEXT}\" \"$IMG_PATH\"" >> /tmp/argh
+    echo "convert -background black -fill white -font \"${ITERM_BG_FONT}\" -size 400x200 -rotate 20 \"label:${TEXT}\" \"$IMG_PATH\"" >> /tmp/argh
 }
 
 NOW=`date`
