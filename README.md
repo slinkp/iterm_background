@@ -9,14 +9,14 @@ are easier to set up and might be just as good.  This script is a proof of conce
 more interesting things.
 
 It actually doesn't matter if it's via ssh; we use
-iTerm2 [triggers[(https://iterm2.com/features.html#triggers)
+iTerm2 [triggers](https://iterm2.com/features.html#triggers)
 that just pattern-match on the prompt.
 
 It uses iTerm2's [scripting support](https://iterm2.com/documentation-scripting.html)
 
 ## Demo Screen Capture
 
-![an animation showing terminal backgrounds changing](http://recordit.co/RoxFH5k7YW)
+![an animation showing terminal backgrounds changing](http://g.recordit.co/RoxFH5k7YW.gif)
 
 
 ## Prerequisites
