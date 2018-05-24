@@ -57,6 +57,13 @@ It uses iTerm2's [scripting support](https://iterm2.com/documentation-scripting.
     not great as it would temporarily disable any default image you may have
     set for your iTerm2 profile.)
 
+* Adjust blending of image to taste. iTerm2 -> Preferences -> Profiles ->
+  Window -> Background Image -> Blending. I prefer it set pretty far to the
+  left, perhaps about 15%.  All the way to the left would be invisible; all the
+  way to the right would overwhelm the shell text.
+
+  You could also hack the `convert` command to generate a lower contrast image.
+
 * If you don't like the generated images, play around with the `convert`
   command in `iterm_set_bg_for_host.sh` to your liking.
 
