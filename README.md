@@ -40,7 +40,7 @@ It uses iTerm2's [scripting support](https://iterm2.com/documentation-scripting.
   * Go to Iterm2 -> Preferences -> Profiles -> Advanced -> Triggers -> Edit
   * Click the "+" button to add a trigger. We'll start with one that matches a
     very common default prompt style, so should work on most hosts you ssh to.
-    * **Regular expression**: `^\[(.*)@(.*)`
+    * **Regular expression**: `^\[(.*)@(.*)]`
     * **Action**: "Run Command"
     * **Parameters**: `<path to your checkout>/iterm_set_bg_for_host.sh \2`
     * **Instant**: Turn this on if you want the background to change when prompt

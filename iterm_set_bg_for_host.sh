@@ -40,9 +40,16 @@ fi
 
 
 if [ -n "$IMG_PATH" ]; then
-    if [ ! -f "$IMG_PATH" ]; then
+    # # Try fetching the first hit from an image search.
+    # TEMP_IMAGE=`python2.7 $HERE/image_search.py "${TEXT}"`
+    # if [ -z "$TEMP_IMAGE" ]; then
+    #     echo "Nothing found online, generating from text"
         generate_text_image "$TEXT" "$IMG_PATH"
-    fi
+    # else 
+    #     echo "Converting $TEMP_IMAGE and adding label"
+    #     convert ${TEMP_IMAGE} -resize 500x500 -fill white -stroke black -strokewidth 0.2 -font "${ITERM_BG_FONT}" -draw "scale 8,8 gravity center rotate 18 text 0,0 ${TARGET_HOST}" "${IMG_PATH}";
+    #     /bin/rm -i -f "${TEMP_IMAGE}"
+    # fi
 fi
 
 osascript $HERE/iterm_set_bg.scpt "$IMG_PATH"
